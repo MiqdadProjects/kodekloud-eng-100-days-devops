@@ -219,7 +219,10 @@ For quick copy-paste, execute as **natasha user** on **Storage Server (ststor01)
 
 ```bash
 # Connect to storage server as natasha
-ssh natasha@ststor01
+ssh natasha@ststor01  
+
+#if getting any permissions errors 
+sudo su -
 
 # Navigate to repository
 cd /usr/src/kodekloudrepos/media
@@ -236,6 +239,18 @@ git checkout -b xfusioncorp_media
 git branch -v
 git branch --list
 git status
+
+#TROUBLESHOOTING
+
+# if getting ownership issues 
+sudo chown -R natasha:natasha /usr/src/kodekloudrepos/media
+
+# to adjust repo permissions
+
+sudo chmod -R g+w /usr/src/kodekloudrepos/media
+sudo chgrp -R natasha /usr/src/kodekloudrepos/media
+
+
 ```
 
 ---
