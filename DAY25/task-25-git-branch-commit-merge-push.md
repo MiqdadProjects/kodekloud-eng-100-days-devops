@@ -31,9 +31,10 @@ ssh natasha@ststor01
 
 ---
 
-## 🔹 Step 2: Navigate to the Repository
+## 🔹 Step 2: Navigate to the Repository  (use sudo su - if getting any error or permission issue)
 
 ```bash
+sudo su -
 cd /usr/src/kodekloudrepos/demo
 ```
 
@@ -88,6 +89,7 @@ git branch -v
 ## 🔹 Step 5: Create the New Branch
 
 ```bash
+sudo chown -R natasha:natasha /usr/src/kodekloudrepos/cluster  (use only if getting permissions errors)
 git checkout -b nautilus master
 ```
 
@@ -305,6 +307,10 @@ git checkout master
 git merge nautilus
 git push origin master
 git push origin nautilus
+
+#if getting permissions errors
+sudo su -
+sudo chown -R natasha:natasha /usr/src/kodekloudrepos/cluster
 ```
 
 ---
