@@ -341,8 +341,7 @@ deployment.apps/iron-db-deployment-datacenter        1/1     1            1     
 
 **Purpose**: Verify the Iron Gallery application is accessible via the NodePort (32678).
 
-**Expected Output** (via browser):
-- The Iron Gallery installation page appears (e.g., a setup or welcome page for the gallery application).
+**Expected Output**: ![screenshot](<Lychee -.png>)
 
 **Alternative CLI Test** (if no App button is available):
 ```bash
